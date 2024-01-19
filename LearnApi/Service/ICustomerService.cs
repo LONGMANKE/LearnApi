@@ -1,9 +1,10 @@
-﻿using LearnAPI.Repos.Models;
+﻿using LearnAPI.Modal;
+using LearnAPI.Repos.Models;
 
 namespace LearnAPI.Service
 {
     public interface ICustomerService
         {
-        List<TblCustomer> Getall();
+        List<Customermodal> Getall();
     }
 }
