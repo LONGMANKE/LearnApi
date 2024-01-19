@@ -26,7 +26,7 @@ namespace LearnAPI.Modal
         public decimal? Creditlimit { get; set; }
 
         public string? IsActive { get; set; }
-        public bool? Statusname { get; set; }
+        public string? Statusname { get; set; }
 
 
 
