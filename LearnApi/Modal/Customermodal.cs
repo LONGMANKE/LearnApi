@@ -25,7 +25,7 @@ namespace LearnAPI.Modal
         [Column(TypeName = "decimal(18, 2)")]
         public decimal? Creditlimit { get; set; }
 
-        public string? IsActive { get; set; }
+        public bool? IsActive { get; set; }
         public string? Statusname { get; set; }
 
 

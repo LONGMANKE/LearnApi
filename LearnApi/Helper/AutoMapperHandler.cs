@@ -10,7 +10,7 @@ namespace LearnAPI.Helper
         {
 
             CreateMap<TblCustomer, Customermodal>()
-    .ForMember(item => item.Statusname, opt => opt.MapFrom(item => item.IsActive.HasValue && item.IsActive.Value ? "Active" : "Inactive"));
+    .ForMember(item => item.Statusname, opt => opt.MapFrom(item => item.IsActive.HasValue && item.IsActive.Value ? "Active" : "Inactive")).ReverseMap();
 
 
         }
