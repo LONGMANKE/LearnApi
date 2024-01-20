@@ -4,6 +4,7 @@ using LearnAPI.Repos;
 using LearnAPI.Repos.Models;
 using LearnAPI.Modal;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 
 
@@ -17,9 +18,9 @@ namespace LearnAPI.Container
             this.context = context;
             this.mapper = mapper; 
                 }
-            public List<Customermodal> Getall()
+            public async Task<List<Customermodal>> Getall()
         { List<Customermodal> _response= new List<Customermodal>();
-            var _data= this.context.TblCustomers.ToList();
+            var _data= await this.context.TblCustomers.ToListAsync();
             if (_data != null)
             {
                 _response = this.mapper.Map<List<TblCustomer>, List<Customermodal>>(_data);

@@ -16,7 +16,7 @@ namespace LearnAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var data = this.service.Getall();
+            var data = await this.service.Getall();
             if (data == null)
             {
                 return new NotFoundResult();

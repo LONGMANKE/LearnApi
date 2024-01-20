@@ -5,6 +5,6 @@ namespace LearnAPI.Service
 {
     public interface ICustomerService
         {
-        List<Customermodal> Getall();
+        Task<List<Customermodal>> Getall();
     }
 }
